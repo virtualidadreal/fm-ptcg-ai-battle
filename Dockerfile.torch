@@ -1,0 +1,10 @@
+# Igual que ptcg-cabt pero con torch (CPU) para validar agentes que infieren con la policy net (Leon v3).
+# La runtime de submission de Kaggle YA trae torch; esto replica eso en local.
+# Build:  docker build --platform=linux/amd64 -f Dockerfile.torch -t ptcg-torch .
+FROM --platform=linux/amd64 python:3.11-slim
+
+RUN pip install --no-cache-dir kaggle-environments trueskill numpy \
+    && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+WORKDIR /work
+CMD ["python", "smoke_test.py"]

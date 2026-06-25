@@ -1,0 +1,252 @@
+[A/B] loading agents...
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO: Successfully loaded OpenSpiel environments: 31.
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_amazons
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_backgammon
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_python_ant_foraging
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_checkers
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_chess
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_clobber
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_coin_game
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_coin_game_arena
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_connect_four
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_dark_hex
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_dots_and_boxes
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_gin_rummy
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_go
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_goofspiel
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_havannah
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_hearts
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_hex
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_lines_of_action
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_mancala
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_matching_pennies_3p
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_negotiation
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_oshi_zumo
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_othello
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_repeated_game
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_tic_tac_toe
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_ultimate_tic_tac_toe
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_snake
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_y
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_universal_poker
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_repeated_poker
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO:    open_spiel_python_repeated_pokerkit
+[kaggle_environments.envs.open_spiel_env.open_spiel_env] INFO: OpenSpiel games skipped: 0.
+  [ok] agents_official/sabrina_kb_seq deck-phase returns 60 ids
+  [ok] agents_official/sabrina_v1 deck-phase returns 60 ids
+  game 1/200: A=1 B=-1  [1W/0L/0D]
+  game 2/200: A=1 B=-1  [2W/0L/0D]
+  game 3/200: A=-1 B=1  [2W/1L/0D]
+  game 4/200: A=1 B=-1  [3W/1L/0D]
+  game 5/200: A=-1 B=1  [3W/2L/0D]
+  game 6/200: A=1 B=-1  [4W/2L/0D]
+  game 7/200: A=-1 B=1  [4W/3L/0D]
+  game 8/200: A=-1 B=1  [4W/4L/0D]
+  game 9/200: A=-1 B=1  [4W/5L/0D]
+  game 10/200: A=1 B=-1  [5W/5L/0D]
+  game 11/200: A=-1 B=1  [5W/6L/0D]
+  game 12/200: A=1 B=-1  [6W/6L/0D]
+  game 13/200: A=-1 B=1  [6W/7L/0D]
+  game 14/200: A=1 B=-1  [7W/7L/0D]
+  game 15/200: A=-1 B=1  [7W/8L/0D]
+  game 16/200: A=1 B=-1  [8W/8L/0D]
+  game 17/200: A=1 B=-1  [9W/8L/0D]
+  game 18/200: A=-1 B=1  [9W/9L/0D]
+  game 19/200: A=-1 B=1  [9W/10L/0D]
+  game 20/200: A=-1 B=1  [9W/11L/0D]
+  game 21/200: A=1 B=-1  [10W/11L/0D]
+  game 22/200: A=1 B=-1  [11W/11L/0D]
+  game 23/200: A=1 B=-1  [12W/11L/0D]
+  game 24/200: A=1 B=-1  [13W/11L/0D]
+  game 25/200: A=-1 B=1  [13W/12L/0D]
+  game 26/200: A=-1 B=1  [13W/13L/0D]
+  game 27/200: A=1 B=-1  [14W/13L/0D]
+  game 28/200: A=-1 B=1  [14W/14L/0D]
+  game 29/200: A=1 B=-1  [15W/14L/0D]
+  game 30/200: A=-1 B=1  [15W/15L/0D]
+  game 31/200: A=-1 B=1  [15W/16L/0D]
+  game 32/200: A=-1 B=1  [15W/17L/0D]
+  game 33/200: A=1 B=-1  [16W/17L/0D]
+  game 34/200: A=-1 B=1  [16W/18L/0D]
+  game 35/200: A=1 B=-1  [17W/18L/0D]
+  game 36/200: A=1 B=-1  [18W/18L/0D]
+  game 37/200: A=-1 B=1  [18W/19L/0D]
+  game 38/200: A=-1 B=1  [18W/20L/0D]
+  game 39/200: A=1 B=-1  [19W/20L/0D]
+  game 40/200: A=-1 B=1  [19W/21L/0D]
+  game 41/200: A=1 B=-1  [20W/21L/0D]
+  game 42/200: A=1 B=-1  [21W/21L/0D]
+  game 43/200: A=1 B=-1  [22W/21L/0D]
+  game 44/200: A=1 B=-1  [23W/21L/0D]
+  game 45/200: A=1 B=-1  [24W/21L/0D]
+  game 46/200: A=-1 B=1  [24W/22L/0D]
+  game 47/200: A=-1 B=1  [24W/23L/0D]
+  game 48/200: A=-1 B=1  [24W/24L/0D]
+  game 49/200: A=1 B=-1  [25W/24L/0D]
+  game 50/200: A=-1 B=1  [25W/25L/0D]
+  game 51/200: A=-1 B=1  [25W/26L/0D]
+  game 52/200: A=-1 B=1  [25W/27L/0D]
+  game 53/200: A=1 B=-1  [26W/27L/0D]
+  game 54/200: A=-1 B=1  [26W/28L/0D]
+  game 55/200: A=-1 B=1  [26W/29L/0D]
+  game 56/200: A=-1 B=1  [26W/30L/0D]
+  game 57/200: A=-1 B=1  [26W/31L/0D]
+  game 58/200: A=-1 B=1  [26W/32L/0D]
+  game 59/200: A=1 B=-1  [27W/32L/0D]
+  game 60/200: A=-1 B=1  [27W/33L/0D]
+  game 61/200: A=-1 B=1  [27W/34L/0D]
+  game 62/200: A=1 B=-1  [28W/34L/0D]
+  game 63/200: A=1 B=-1  [29W/34L/0D]
+  game 64/200: A=1 B=-1  [30W/34L/0D]
+  game 65/200: A=-1 B=1  [30W/35L/0D]
+  game 66/200: A=-1 B=1  [30W/36L/0D]
+  game 67/200: A=1 B=-1  [31W/36L/0D]
+  game 68/200: A=-1 B=1  [31W/37L/0D]
+  game 69/200: A=-1 B=1  [31W/38L/0D]
+  game 70/200: A=1 B=-1  [32W/38L/0D]
+  game 71/200: A=-1 B=1  [32W/39L/0D]
+  game 72/200: A=1 B=-1  [33W/39L/0D]
+  game 73/200: A=1 B=-1  [34W/39L/0D]
+  game 74/200: A=1 B=-1  [35W/39L/0D]
+  game 75/200: A=1 B=-1  [36W/39L/0D]
+  game 76/200: A=1 B=-1  [37W/39L/0D]
+  game 77/200: A=-1 B=1  [37W/40L/0D]
+  game 78/200: A=-1 B=1  [37W/41L/0D]
+  game 79/200: A=-1 B=1  [37W/42L/0D]
+  game 80/200: A=1 B=-1  [38W/42L/0D]
+  game 81/200: A=1 B=-1  [39W/42L/0D]
+  game 82/200: A=-1 B=1  [39W/43L/0D]
+  game 83/200: A=1 B=-1  [40W/43L/0D]
+  game 84/200: A=-1 B=1  [40W/44L/0D]
+  game 85/200: A=-1 B=1  [40W/45L/0D]
+  game 86/200: A=1 B=-1  [41W/45L/0D]
+  game 87/200: A=-1 B=1  [41W/46L/0D]
+  game 88/200: A=1 B=-1  [42W/46L/0D]
+  game 89/200: A=1 B=-1  [43W/46L/0D]
+  game 90/200: A=1 B=-1  [44W/46L/0D]
+  game 91/200: A=1 B=-1  [45W/46L/0D]
+  game 92/200: A=-1 B=1  [45W/47L/0D]
+  game 93/200: A=1 B=-1  [46W/47L/0D]
+  game 94/200: A=-1 B=1  [46W/48L/0D]
+  game 95/200: A=-1 B=1  [46W/49L/0D]
+  game 96/200: A=-1 B=1  [46W/50L/0D]
+  game 97/200: A=1 B=-1  [47W/50L/0D]
+  game 98/200: A=1 B=-1  [48W/50L/0D]
+  game 99/200: A=1 B=-1  [49W/50L/0D]
+  game 100/200: A=1 B=-1  [50W/50L/0D]
+  game 101/200: A=-1 B=1  [50W/51L/0D]
+  game 102/200: A=1 B=-1  [51W/51L/0D]
+  game 103/200: A=-1 B=1  [51W/52L/0D]
+  game 104/200: A=-1 B=1  [51W/53L/0D]
+  game 105/200: A=-1 B=1  [51W/54L/0D]
+  game 106/200: A=1 B=-1  [52W/54L/0D]
+  game 107/200: A=-1 B=1  [52W/55L/0D]
+  game 108/200: A=-1 B=1  [52W/56L/0D]
+  game 109/200: A=-1 B=1  [52W/57L/0D]
+  game 110/200: A=1 B=-1  [53W/57L/0D]
+  game 111/200: A=1 B=-1  [54W/57L/0D]
+  game 112/200: A=1 B=-1  [55W/57L/0D]
+  game 113/200: A=1 B=-1  [56W/57L/0D]
+  game 114/200: A=-1 B=1  [56W/58L/0D]
+  game 115/200: A=-1 B=1  [56W/59L/0D]
+  game 116/200: A=1 B=-1  [57W/59L/0D]
+  game 117/200: A=-1 B=1  [57W/60L/0D]
+  game 118/200: A=1 B=-1  [58W/60L/0D]
+  game 119/200: A=1 B=-1  [59W/60L/0D]
+  game 120/200: A=1 B=-1  [60W/60L/0D]
+  game 121/200: A=-1 B=1  [60W/61L/0D]
+  game 122/200: A=-1 B=1  [60W/62L/0D]
+  game 123/200: A=-1 B=1  [60W/63L/0D]
+  game 124/200: A=1 B=-1  [61W/63L/0D]
+  game 125/200: A=1 B=-1  [62W/63L/0D]
+  game 126/200: A=1 B=-1  [63W/63L/0D]
+  game 127/200: A=-1 B=1  [63W/64L/0D]
+  game 128/200: A=1 B=-1  [64W/64L/0D]
+  game 129/200: A=1 B=-1  [65W/64L/0D]
+  game 130/200: A=1 B=-1  [66W/64L/0D]
+  game 131/200: A=-1 B=1  [66W/65L/0D]
+  game 132/200: A=1 B=-1  [67W/65L/0D]
+  game 133/200: A=-1 B=1  [67W/66L/0D]
+  game 134/200: A=-1 B=1  [67W/67L/0D]
+  game 135/200: A=-1 B=1  [67W/68L/0D]
+  game 136/200: A=1 B=-1  [68W/68L/0D]
+  game 137/200: A=1 B=-1  [69W/68L/0D]
+  game 138/200: A=-1 B=1  [69W/69L/0D]
+  game 139/200: A=1 B=-1  [70W/69L/0D]
+  game 140/200: A=-1 B=1  [70W/70L/0D]
+  game 141/200: A=-1 B=1  [70W/71L/0D]
+  game 142/200: A=-1 B=1  [70W/72L/0D]
+  game 143/200: A=-1 B=1  [70W/73L/0D]
+  game 144/200: A=-1 B=1  [70W/74L/0D]
+  game 145/200: A=1 B=-1  [71W/74L/0D]
+  game 146/200: A=-1 B=1  [71W/75L/0D]
+  game 147/200: A=1 B=-1  [72W/75L/0D]
+  game 148/200: A=1 B=-1  [73W/75L/0D]
+  game 149/200: A=-1 B=1  [73W/76L/0D]
+  game 150/200: A=-1 B=1  [73W/77L/0D]
+  game 151/200: A=1 B=-1  [74W/77L/0D]
+  game 152/200: A=1 B=-1  [75W/77L/0D]
+  game 153/200: A=-1 B=1  [75W/78L/0D]
+  game 154/200: A=-1 B=1  [75W/79L/0D]
+  game 155/200: A=-1 B=1  [75W/80L/0D]
+  game 156/200: A=1 B=-1  [76W/80L/0D]
+  game 157/200: A=-1 B=1  [76W/81L/0D]
+  game 158/200: A=-1 B=1  [76W/82L/0D]
+  game 159/200: A=-1 B=1  [76W/83L/0D]
+  game 160/200: A=-1 B=1  [76W/84L/0D]
+  game 161/200: A=1 B=-1  [77W/84L/0D]
+  game 162/200: A=1 B=-1  [78W/84L/0D]
+  game 163/200: A=-1 B=1  [78W/85L/0D]
+  game 164/200: A=-1 B=1  [78W/86L/0D]
+  game 165/200: A=1 B=-1  [79W/86L/0D]
+  game 166/200: A=1 B=-1  [80W/86L/0D]
+  game 167/200: A=-1 B=1  [80W/87L/0D]
+  game 168/200: A=-1 B=1  [80W/88L/0D]
+  game 169/200: A=-1 B=1  [80W/89L/0D]
+  game 170/200: A=1 B=-1  [81W/89L/0D]
+  game 171/200: A=-1 B=1  [81W/90L/0D]
+  game 172/200: A=1 B=-1  [82W/90L/0D]
+  game 173/200: A=1 B=-1  [83W/90L/0D]
+  game 174/200: A=-1 B=1  [83W/91L/0D]
+  game 175/200: A=1 B=-1  [84W/91L/0D]
+  game 176/200: A=1 B=-1  [85W/91L/0D]
+  game 177/200: A=-1 B=1  [85W/92L/0D]
+  game 178/200: A=1 B=-1  [86W/92L/0D]
+  game 179/200: A=1 B=-1  [87W/92L/0D]
+  game 180/200: A=-1 B=1  [87W/93L/0D]
+  game 181/200: A=1 B=-1  [88W/93L/0D]
+  game 182/200: A=-1 B=1  [88W/94L/0D]
+  game 183/200: A=1 B=-1  [89W/94L/0D]
+  game 184/200: A=-1 B=1  [89W/95L/0D]
+  game 185/200: A=1 B=-1  [90W/95L/0D]
+  game 186/200: A=-1 B=1  [90W/96L/0D]
+  game 187/200: A=-1 B=1  [90W/97L/0D]
+  game 188/200: A=1 B=-1  [91W/97L/0D]
+  game 189/200: A=1 B=-1  [92W/97L/0D]
+  game 190/200: A=1 B=-1  [93W/97L/0D]
+  game 191/200: A=-1 B=1  [93W/98L/0D]
+  game 192/200: A=-1 B=1  [93W/99L/0D]
+  game 193/200: A=1 B=-1  [94W/99L/0D]
+  game 194/200: A=-1 B=1  [94W/100L/0D]
+  game 195/200: A=-1 B=1  [94W/101L/0D]
+  game 196/200: A=-1 B=1  [94W/102L/0D]
+  game 197/200: A=1 B=-1  [95W/102L/0D]
+  game 198/200: A=1 B=-1  [96W/102L/0D]
+  game 199/200: A=1 B=-1  [97W/102L/0D]
+  game 200/200: A=-1 B=1  [97W/103L/0D]
+
+======================================================================
+A = agents_official/sabrina_kb_seq
+B = agents_official/sabrina_v1
+Result (A's view): 97W / 103L / 0D   (total 200 games)
+Win-rate of A over decisive games: 48.5%  (Wilson 95% IC: 41.7% .. 55.4%)
+==> Sin diferencia significativa (el IC Wilson incluye 0.5).
+TrueSkill: A mu=24.89 sigma=0.80 | B mu=25.11 sigma=0.80 | mu_A - mu_B = -0.22
+======================================================================
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+WARNING: el cabt LOCAL no predice el ranking del ladder (verificado por el
+campo top: una opt 62% local quedo PEOR en ladder). Esto es un FILTRO barato,
+NO el JUEZ. El juez es el ladder real. Valida correlacion con el ladder antes
+de fiarte. (ref roadmap seccion 6 / 11.3)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

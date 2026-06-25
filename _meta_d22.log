@@ -1,0 +1,46 @@
+[elo] loaded 2918 teams from pokemon-tcg-ai-battle-publicleaderboard-2026-06-23T06:30:34.csv
+
+=== FIELD — all players (decisive games=5053) ===
+archetype                   field%  winrate      n
+Hop's Trevenant              34.1%    50.6%   3444
+Alakazam                     29.0%    50.6%   2932
+Mega Lucario ex              15.9%    37.4%   1608
+Dragapult ex                  5.7%    59.2%    573
+Walrein                       2.2%    74.1%    220
+Iono’s Bellibolt ex           2.1%    38.7%    217
+Cinderace                     1.8%    63.7%    179
+Team Rocket's Mewtwo ex       1.0%    65.7%    105
+Dipplin                       0.9%    58.1%     93
+Lillie’s Clefairy ex          0.9%    55.8%     86
+Dusknoir                      0.8%    63.7%     80
+Cynthia's Garchomp ex         0.8%    57.9%     76
+Okidogi                       0.6%    72.3%     65
+Crustle                       0.6%    44.1%     59
+Chandelure                    0.6%    54.4%     57
+
+=== TOP TIER — Elo>=1150 (decisive games=649) ===
+archetype                   field%  winrate      n
+Alakazam                     30.4%    58.2%    395
+Hop's Trevenant              19.6%    58.4%    255
+Dragapult ex                 16.4%    62.4%    213
+Team Rocket's Mewtwo ex       8.1%    65.7%    105
+Cinderace                     4.7%    73.8%     61
+Chandelure                    4.4%    54.4%     57
+Dipplin                       3.9%    64.0%     50
+Cynthia's Garchomp ex         3.7%    64.6%     48
+Dusknoir                      3.1%    62.5%     40
+Mega Froslass ex              2.9%    60.5%     38
+Walrein                       2.9%    81.1%     37
+
+=== MATCHUP win% (row vs col, blank=<5 games) — top 8 decks ===
+                 Hop's T Alakaza Mega Lu Dragapu Walrein Iono’s  Cindera Team Ro
+Hop's Trevenant        —     51%     76%     16%     14%     67%     21%     26%
+Alakazam             49%       —     65%     49%     11%     48%     45%     10%
+Mega Lucario ex      24%     35%       —     60%     36%     86%     55%       —
+Dragapult ex         84%     51%     40%       —     26%     50%     40%     57%
+Walrein              86%     89%     64%     74%       —       —      0%     67%
+Iono’s Bellibol      33%     52%     14%     50%       —       —       —       —
+Cinderace            79%     55%     45%     60%    100%       —       —       —
+Team Rocket's M      74%     90%       —     43%     33%       —       —       —
+
+saved /tmp/meta_20260622.json

@@ -1,0 +1,46 @@
+import sys, os, json, glob
+from collections import Counter
+sys.path.insert(0, '/work/docs/official/models/cg-lib')
+sys.path.insert(0, '/work/ptcg-abc/tools')
+from cg.api import all_card_data
+from meta_analyze import dk, CT
+def cname(p):
+    c = CT.get(p); return c.name if c else f'?{p}'
+files = glob.glob('/work/data/episodes/d22/_extracted/*.json')
+print('files', len(files), flush=True)
+tr = Counter(); va = [0, 0]; seen = 0
+for f in files:
+    try:
+        d = json.load(open(f))
+        rw = d['rewards']
+        dk0 = d['steps'][1][0]['action']; dk1 = d['steps'][1][1]['action']
+        if not (isinstance(dk0, list) and len(dk0) == 60): continue
+        if rw[0] == rw[1]: continue
+        who = 0 if rw[0] > rw[1] else 1
+        seen += 1
+        L = [dk(dk0), dk(dk1)]
+        decks = [dk0, dk1]
+        for i in (0, 1):
+            if L[i] == "Team Rocket's Mewtwo ex":
+                tr[tuple(sorted(decks[i]))] += 1
+                if L[1-i] == 'Alakazam':
+                    va[1] += 1
+                    if who == i: va[0] += 1
+    except Exception: continue
+print('decisive', seen, 'TR distinct', len(tr), 'TR total', sum(tr.values()))
+print('TR vs Ala', va, f'{va[0]/max(va[1],1)*100:.0f}% TR win')
+tl, c = tr.most_common(1)[0]
+print(f'MOST COMMON ({c}x):')
+cc = Counter(tl)
+rows = sorted(cc.items(), key=lambda kv: (-(kv[0] < 1000), -kv[1], cname(kv[0])))
+for p, n in rows:
+    cc2 = CT.get(p); tag = ''
+    if cc2 and p < 1000 and cc2.hp:
+        tag = f'HP{cc2.hp}'
+        for r in ('megaEx','ex','stage2','stage1','basic'):
+            if getattr(cc2, r, 0): tag += f' {r}'; break
+    print(f'  {n}x {cname(p):34s} {tag}')
+json.dump({'count': c, 'total': sum(tr.values()), 'distinct': len(tr),
+           'named': [[n, cname(p), p] for p, n in rows], 'tr_vs_ala': va},
+          open('/tmp/tr_mewtwo.json', 'w'), ensure_ascii=False, indent=2)
+print('saved', flush=True)

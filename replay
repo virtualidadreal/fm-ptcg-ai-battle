@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+# Visor de replays PTCG (Battle Replay Visualizer v2).
+#
+# Uso:
+#   ./replay                  episodio de ejemplo
+#   ./replay <ruta.json>      renderiza tu replay (JSON formato dict con 'steps')
+#   ./replay <id>             busca <id>.json en los exports de data/episodes/ y lo abre
+#   ./replay sim [a0] [a1]    simula una partida en Docker (a0/a1 = random|rule|mcts|ucb)
+#   ./replay list             lista los exports de episodios disponibles
+#
+# Genera un HTML en tools/replay-visualizer/ y lo abre en el navegador.
+set -euo pipefail
+PROJ="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PY="$PROJ/.venv/bin/python"
+TOOL="$PROJ/tools/replay-visualizer"
+EPDIR="$PROJ/data/episodes"
+
+open_file() {  # abre en el navegador salvo que REPLAY_NO_OPEN este puesto
+  echo "HTML generado: $1"
+  if [ -z "${REPLAY_NO_OPEN:-}" ] && command -v open >/dev/null 2>&1; then
+    open "$1" || true
+  fi
+}
+
+cmd="${1:-}"
+
+case "$cmd" in
+  -h|--help)
+    grep '^#' "$0" | sed 's/^#\{1,\} \{0,1\}//'
+    ;;
+
+  sim)
+    a0="${2:-rule}"; a1="${3:-rule}"
+    echo "Simulando $a0 vs $a1 en Docker (linux/amd64)..."
+    docker run --platform=linux/amd64 --rm -e AGENT0="$a0" -e AGENT1="$a1" \
+      -v "$PROJ":/work -w /work ptcg-cabt python tools/replay-visualizer/sim/simulate_battle.py
+    open_file "$TOOL/replay_sim.html"
+    ;;
+
+  list)
+    echo "Exports de episodios en data/episodes/:"
+    find "$EPDIR" -name '*.zip' 2>/dev/null | sort | while read -r z; do
+      n=$(unzip -l "$z" 2>/dev/null | tail -1 | awk '{print $2}')
+      echo "  $(basename "$z")  (~${n:-?} partidas)"
+    done
+    echo "Ver una partida:  ./replay <id_de_episodio>"
+    ;;
+
+  "")
+    echo "Renderizando episodio de ejemplo..."
+    "$PY" "$TOOL/render_episode.py"
+    open_file "$TOOL/replay_episode.html"
+    ;;
+
+  *)
+    if [ -f "$cmd" ]; then
+      # ruta a un JSON
+      out="$TOOL/replay_$(basename "${cmd%.*}").html"
+      "$PY" "$TOOL/render_episode.py" "$cmd" -o "$out"
+      open_file "$out"
+    elif [[ "$cmd" =~ ^[0-9]+$ ]]; then
+      # id de episodio: buscarlo dentro de los zips (sin descomprimir los 21GB)
+      tmp="/tmp/ptcg_ep_${cmd}.json"
+      found=""
+      while read -r z; do
+        if unzip -p "$z" "${cmd}.json" > "$tmp" 2>/dev/null && [ -s "$tmp" ]; then
+          found="$z"; break
+        fi
+      done < <(find "$EPDIR" -name '*.zip' 2>/dev/null | sort -r)
+      if [ -z "$found" ]; then
+        echo "No encontre el episodio $cmd en data/episodes/. Prueba ./replay list o pasa la ruta al JSON."
+        exit 1
+      fi
+      echo "Episodio $cmd en $(basename "$found")"
+      out="$TOOL/replay_${cmd}.html"
+      "$PY" "$TOOL/render_episode.py" "$tmp" -o "$out"
+      open_file "$out"
+    else
+      echo "No reconozco '$cmd'. Usa: ./replay [ruta.json | id | sim | list]   (./replay --help)"
+      exit 1
+    fi
+    ;;
+esac

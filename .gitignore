@@ -1,0 +1,91 @@
+# Material OFICIAL de Kaggle (NO redistribuir: binario del motor + card data con copyright).
+# Descargado del competition data de pokemon-tcg-ai-battle. Cada uno lo baja con su token.
+data/competition/
+**/libcg.so
+**/cg.dll
+*Card_Data*.csv
+*Card_ID*.pdf
+
+# Material oficial clonado del competidor (también gitignored en su repo)
+ptcg-abc/docs/official/models/cg-lib/
+**/cg/
+
+# Episodios/replays diarios (~700MB/zip, no redistribuir; cada uno los baja con su token)
+data/episodes/
+data/*leaderboard*.csv
+bcil/dataset/
+
+# Artefactos locales de experimentos / runtime
+experiments/_*.log
+experiments/variants/
+.venv/
+__pycache__/
+*.pyc
+*.tar.gz
+
+# === HARDENING pre-publicación (repo enlazado del Strategy report) ===
+# OJO: hoy el material propietario solo está tapado por la regla `proyectos/` del
+# monorepo /Users/franmilla/FMA/.gitignore, que NO viaja al extraer esta carpeta como
+# repo standalone. Estas reglas hacen el .gitignore del PROYECTO autosuficiente (§2.4 +
+# RULES.md 3.18.f: no redistribuir card data / competition data / replays / pesos de PE).
+# Validar antes de publicar:
+#   cd <repo-extraido> && git init && git add -A --dry-run | \
+#     grep -iE 'card|leaderboard|episode|\.pt$|\.npz$|\.zip$|\.ipynb$'   # debe salir vacío
+
+# Card data oficial derivada (Pokémon Elements) fuera de data/competition/
+**/cards_enriched.json
+**/cards.json
+**/card_db.json
+**/card_images.json
+
+# Dumps del leaderboard público fuera de data/ (carpeta _tmp_lb, data/leaderboard_dl, etc.)
+**/*publicleaderboard*.csv
+**/*leaderboard*.csv
+_tmp_lb/
+data/leaderboard_dl/
+
+# ZIPs del competition bundle de Kaggle (no solo *.tar.gz)
+*.zip
+
+# Extractos / renders de replays propietarios (Competition Data)
+data/alakazam_analysis/
+data/megastarmie_analysis/
+**/render_*.html
+**/replay_*.html
+research/megastarmie/*.html
+
+# Pesos entrenados sobre Pokémon Elements fuera de bcil/dataset/
+**/*.pt
+# Shards de dataset codificado fuera de bcil/dataset/ (p.ej. _archivado/)
+**/*.npz
+_archivado/encoded-partial-killed/
+
+# Notebooks oficiales / de terceros redistribuidos (sharing solo en foros Kaggle)
+data/official_kernels/
+data/kernels/
+tools/replay-visualizer/*.ipynb
+tools/replay-visualizer/*.html
+tools/replay-visualizer/sim_steps.json
+tools/replay-visualizer/*.png
+
+# === HARDENING 2 (25 jun, audit pre-publicación del repo público) ===
+# Salidas DERIVADAS de replays propietarios: decisiones/board-state de top-players
+# (keidroid etc.) extraídos de las episodes oficiales vía el bucle de divergencia.
+# NO redistribuir (derived Competition Data, RULES 3.18.f).
+data/decode_*.txt
+data/*divergence*.txt
+research/divergence/
+# Índice de episodes (slugs/URLs públicos, pero scores agregados derivados) — conservador.
+data/episodes_index/
+# Repo del competidor clonado (su material/licencia; no necesario para reproducibilidad).
+ptcg-abc/
+
+# Writeups de análisis que CITAN observaciones específicas de replays propietarios
+# (episodio+turno+cardId+board-state de top-players). El valor metodológico vive en el
+# report sin volcar Competition Data derivada.
+research/megastarmie-keidroid-analisis-2026-06-22.md
+research/alakazam-top-pilot-analisis-2026-06-22.md
+
+# Pares BC (obs->action) derivados de episodes Elo>=1150 = Competition Data derivada. NO publicar.
+bcil/*.jsonl
+bcil/*.ndjson

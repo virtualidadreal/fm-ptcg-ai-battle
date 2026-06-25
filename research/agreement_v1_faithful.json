@@ -1,0 +1,19 @@
+{
+  "files": 10,
+  "decisions": 1252,
+  "matches": 267,
+  "crashes": 0,
+  "proxy_agreement_pct": 21.3258785942492,
+  "policy_diag": {
+    "decisions": 1252,
+    "policy_ok": 1252,
+    "policy_fallback": 0,
+    "obs_fallback": 0,
+    "deck_returns": 0,
+    "errors": {},
+    "fallback_rate": 0.0,
+    "deck_ok": true
+  },
+  "faithful": true,
+  "verdict": "computed-offline (FAITHFUL, engine present)"
+}
